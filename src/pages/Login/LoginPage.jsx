@@ -4,8 +4,15 @@ import logo from "../../assets/logo-transparente.png";
 import Modal from "../../components/Modal/Modal";
 import Title from "../../components/Title/Title";
 import Button from "../../components/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
+  const navigate = useNavigate();
+
+  const handleRegisterRedirect = () => {
+    navigate("/register");
+  };
+
   return (
     <Background>
       <Modal>
@@ -41,7 +48,7 @@ export default function LoginPage() {
             <p className={styles.forgetPassword}>Esqueceu sua senha?</p>
           <Button text="Entrar"></Button>
           <hr className={styles.divider} />
-          <button className={styles.button}>
+          <button className={styles.button} onClick={handleRegisterRedirect}>
               Não tenho conta
           </button>
         </form>
