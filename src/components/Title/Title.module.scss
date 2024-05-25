@@ -1,7 +1,23 @@
-.title {
+// Title.module.scss
+.titleWrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .arrow {
+    position: absolute;
+    left: 42px; /* Ajuste conforme necessário */
+    width: 34px;
+    height: 33px;
+    cursor: pointer;
+  }
+  
+  .title {
     font-size: 32px;
     font-weight: 500;
-    margin-bottom: 1rem;
     text-align: center;
-    padding-bottom: 20px;
-}
+  }
+  
