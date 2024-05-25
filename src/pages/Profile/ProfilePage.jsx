@@ -1,20 +1,18 @@
 import Background from "../../components/Background/Background";
-import styles from "./RegisterPage.module.scss";
-import logo from "../../assets/logo-transparente.png";
+import styles from "./ProfilePage.module.scss";
+import Modal from "../../components/Modal/Modal";
 import Title from "../../components/Title/Title";
 import Button from "../../components/Button/Button";
 import arrowBack from "../../assets/arrow-back.png";
 
-export default function RegisterPage() {
-    return (
-        <Background>
-            <div className={styles.modal}>
-            <div className={styles.modal_box}>
-            <img src={logo} alt="Logo" className={styles.logo} />
-        <Title text="Cadastre-se Aqui" arrow={arrowBack} redirectTo="/"></Title>
+export default function ProfilePage() {
+  return (
+    <Background>
+      <Modal>
+        <Title text="Dados pessoais" arrow={arrowBack} redirectTo="/"></Title>
         <form className={styles.form}>
           <div className={styles.form_gap}>
-            <div className={styles.form_group}>
+          <div className={styles.form_group}>
               <label htmlFor="email" className={styles.label}>
                 Nome
               </label>
@@ -64,11 +62,9 @@ export default function RegisterPage() {
               />
             </div>
           </div>
-          <Button text="Cadastre-se"></Button>
+          <Button text="Atualizar"></Button>
         </form>
-        </div>
-            </div>
-
-        </Background>
-    )
+      </Modal>
+    </Background>
+  );
 }
