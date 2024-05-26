@@ -1,3 +1,4 @@
+// refatorar essa pagina
 import styles from "./SocialPage.module.scss";
 import backArrow from "../../assets/arrow-back.png"
 import Background from "../../components/Background/Background";
