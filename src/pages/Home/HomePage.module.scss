@@ -242,4 +242,7 @@ h2 {
   .promoItem:hover {
     transform: none; /* Remove hover effect for mobile devices */
   }
+  .nav ul li {
+    margin: 6px 0; /* Reduz a margem entre os itens de navegação */
+  }
 }
