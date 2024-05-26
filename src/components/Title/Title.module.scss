@@ -21,3 +21,26 @@
     text-align: center;
   }
   
+  @media (max-width: 768px) {
+    .arrow {
+      left: 10px;
+      width: 28px;
+      height: 27px;
+    }
+  
+    .title {
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .arrow {
+      left: 5px;
+      width: 24px;
+      height: 23px;
+    }
+  
+    .title {
+      font-size: 26px;
+    }
+  }

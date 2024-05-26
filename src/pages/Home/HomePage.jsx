@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   logo,
@@ -53,6 +53,12 @@ export default function HomePage() {
 }
 
 function Sidebar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   const links = [
     { to: "/profile", label: "Perfil" },
     { to: "/cart", label: "Compras" },
@@ -71,7 +77,10 @@ function Sidebar() {
       <div className={styles.logoContainer}>
         <img src={logo} alt="Lancherias" className={styles.logo} />
       </div>
-      <nav>
+      <button className={styles.hamburger} onClick={toggleMenu}>
+        ☰ 
+      </button>
+      <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
         <ul>
           {links.map((link) => (
             <li key={link.to}>
