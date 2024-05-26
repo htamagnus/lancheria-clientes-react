@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Background from "../../components/Background/Background";
 import Modal from "../../components/Modal/Modal";
 import Title from "../../components/Title/Title";
@@ -9,31 +10,56 @@ import coke from "../../assets/images/coke.png";
 import toppings from "../../assets/images/toppings.png";
 
 const CartPage = () => {
+  const initialItems = [
+    {
+      image: burger,
+      title: "Hambúrguer de costela",
+      description: "adicionar cheddar",
+      price: 30.00,
+      quantity: 1,
+    },
+    {
+      image: coke,
+      title: "Refrigerante",
+      description: "enviar canudos",
+      price: 8.00,
+      quantity: 1,
+    },
+    {
+      image: toppings,
+      title: "Sobremesa",
+      description: "adicionar chantilly",
+      price: 30.00,
+      quantity: 1,
+    },
+  ];
+
+  const [items, setItems] = useState(initialItems);
+
+  const handleIncrement = (index) => {
+    const newItems = [...items];
+    newItems[index].quantity += 1;
+    setItems(newItems);
+  };
+
+  const handleDecrement = (index) => {
+    const newItems = [...items];
+    if (newItems[index].quantity > 1) {
+      newItems[index].quantity -= 1;
+    }
+    setItems(newItems);
+  };
+
+  const calculateTotal = () => {
+    return items.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+  };
+
   return (
     <Background>
       <Modal>
         <Title text="Carrinho" arrow={arrowBack} redirectTo="/home" />
         <div className={styles.cards}>
-          {[
-            {
-              image: burger,
-              title: "Hambúrguer de costela",
-              description: "adicionar cheddar",
-              price: "R$ 30,00",
-            },
-            {
-              image: coke,
-              title: "Refrigerante",
-              description: "enviar canudos",
-              price: "R$ 8,00",
-            },
-            {
-              image: toppings,
-              title: "Sobremesa",
-              description: "adicionar chantilly",
-              price: "R$ 30,00",
-            },
-          ].map((item, index) => (
+          {items.map((item, index) => (
             <div key={index} className={styles.cardContainer}>
               <Card height="150px">
                 <img
@@ -44,12 +70,22 @@ const CartPage = () => {
                 <div className={styles.texts}>
                   <h3 className={styles.textsTitle}>{item.title}</h3>
                   <p className={styles.textsParagraph}>{item.description}</p>
-                  <p className={styles.textsPrice}>{item.price}</p>
+                  <p className={styles.textsPrice}>R$ {item.price.toFixed(2)}</p>
                 </div>
                 <div className={styles.quantityControls}>
-                  <button className={styles.quantityButton}>-</button>
-                  <p className={styles.quantityNumber}>1</p>
-                  <button className={styles.quantityButton}>+</button>
+                  <button 
+                    className={styles.quantityButton}
+                    onClick={() => handleDecrement(index)}
+                  >
+                    -
+                  </button>
+                  <p className={styles.quantityNumber}>{item.quantity}</p>
+                  <button 
+                    className={styles.quantityButton}
+                    onClick={() => handleIncrement(index)}
+                  >
+                    +
+                  </button>
                 </div>
               </Card>
             </div>
@@ -57,7 +93,7 @@ const CartPage = () => {
         </div>
         <div className={styles.totalContainer}>
           <p className={styles.totalText}>Total</p>
-          <p className={styles.totalValue}>R$ 68,00</p>
+          <p className={styles.totalValue}>R$ {calculateTotal()}</p>
         </div>
       </Modal>
     </Background>
