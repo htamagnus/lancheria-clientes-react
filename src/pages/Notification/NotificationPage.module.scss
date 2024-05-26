@@ -1,0 +1,35 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.image {
+    width: 32px;
+    height: 34px;
+}
+
+.image1 {
+    margin-left: 150px;
+}
+
+.image2 {
+    margin-left: 223px;
+}
+
+.image3 {
+    margin-left: 315px;
+}
+
+.image4 {
+    margin-left: 145px;
+}
+
