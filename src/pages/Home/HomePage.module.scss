@@ -1,19 +1,19 @@
 /* Adicionando estilo ao body para remover a rolagem */
 body {
     overflow: hidden; /* Remove a rolagem */
-}
-
-.container {
+  }
+  
+  .container {
     display: flex;
     overflow: hidden;
     height: 100%; /* Garante que o container ocupe 100% da altura do body */
-}
+  }
   
-.sidebar {
+  .sidebar {
     width: 240px;
     height: 100vh;
     background-image: url('../../assets/images/background-sidebar.png');
-    background-size: cover; 
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     color: white;
@@ -21,43 +21,43 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+  }
   
-.logoContainer {
+  .logoContainer {
     position: relative;
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
-}
+  }
   
-.logo {
+  .logo {
     margin-top: 70px;
     width: 146px;
     height: 152px;
-}
+  }
   
-nav ul {
+  nav ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
     padding: 0;
     width: 100%;
     font-size: 20px;
-}
+  }
   
-nav ul li {
+  nav ul li {
     margin: 20px 0;
-    text-align: left; 
+    text-align: left;
     cursor: pointer;
-}
+  }
   
-.mainContent {
+  .mainContent {
     flex: 1;
     padding: 0px;
     overflow-y: auto; /* Permite a rolagem interna se o conteúdo exceder a altura */
-}
+  }
   
-.searchBar {
+  .searchBar {
     height: 80px;
     display: flex;
     justify-content: flex-end;
@@ -84,42 +84,49 @@ nav ul li {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
   }
   
-.menu, .promotions {
+  .menu, .promotions {
     margin: 20px 0;
     margin: 40px;
-}
+  }
   
-.menuItems, .promoItems {
+  .menuItems, .promoItems {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
+  }
   
-.menuItem, .promoItem {
+  .menuItem, .promoItem {
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
     margin: 10px;
     flex: 1 1 30%;
     position: relative;
-}
+    transition: transform 0.3s ease; /* Add transition for smooth hover effect */
+  }
   
-.menuImage, .promoImage {
+  .menuItem:hover, .promoItem:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+  }
+  
+  .menuImage, .promoImage {
     width: 100%;
     height: auto;
-}
+  }
   
-h2 {
+  h2 {
     font-size: 30px;
     font-weight: 500;
     margin-left: 20px;
     margin-bottom: 6px;
-}
-
-.link {
+  }
+  
+  .link {
     text-decoration: none;
     color: inherit;
-    &:hover {
-      color: #d1411d;
-    }
   }
+  
+  .link:hover {
+    color: #d1411d;
+  }
+  
