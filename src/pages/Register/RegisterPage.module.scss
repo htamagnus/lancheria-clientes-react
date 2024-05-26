@@ -65,3 +65,26 @@
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 
+  @media (max-width: 768px) {
+    .input,
+    .button {
+      max-width: 350px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .label {
+      font-size: 18px;
+    }
+  
+    .input,
+    .button {
+      height: 36px;
+      font-size: 16px;
+    }
+
+    .modal_box {
+      width: 410px;
+      height: 100vh - 20;
+    }
+  }

@@ -69,3 +69,18 @@
   margin: 20px 0; // Ajusta a margem para espaçamento entre os botões
 }
   
+@media (max-width: 768px) {
+  .input,
+  .button {
+    max-width: 350px;
+  }
+
+  .forgetPassword {
+    margin-left: 200px;
+    text-align: center;
+  }
+
+  .divider {
+    max-width: 350px;
+  }
+}
