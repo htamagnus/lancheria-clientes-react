@@ -6,40 +6,44 @@ import Modal from "../../components/Modal/Modal";
 import Title from "../../components/Title/Title";
 import Card from "../../components/Card/Card";
 
+const faqItems = [
+  { href: "/faq/coupon", text: "Não recebo cupom de desconto" },
+  { href: "/faq/delete-card", text: "Excluir dados do cartão de crédito" },
+  { href: "/faq/update-account", text: "Quero alterar dados cadastrais da conta" },
+];
+
+const supportItems = [
+  { href: "/faq/coupon", text: "Desejo falar diretamente com um atendente", arrowClass: styles.arrowServices },
+];
+
+const FaqList = ({ items }) => (
+  <div className={styles.faqList}>
+    {items.map((item, index) => (
+      <a key={index} href={item.href} className={styles.faqItem}>
+        <span>{item.text}</span>
+        <img src={arrowRight} alt="arrow" className={item.arrowClass || styles.arrow} />
+      </a>
+    ))}
+  </div>
+);
+
 export default function SupportPage() {
   return (
     <Background>
       <Modal>
-        <Title text="Suporte ao Cliente" arrow={backArrow}></Title>
+        <Title text="Suporte ao Cliente" arrow={backArrow} />
+
         <Card additionalStyles={{ marginBottom: "30px" }}>
           <div className={styles.cardContent}>
             <h3 className={styles.cardTitle}>Perguntas frequentes</h3>
-            <div className={styles.faqList}>
-              <a href="/faq/coupon" className={styles.faqItem}>
-                <span>Não recebo cupom de desconto</span>
-                <img src={arrowRight} alt="arrow" className={styles.arrow} />
-              </a>
-              <a href="/faq/delete-card" className={styles.faqItem}>
-                <span>Excluir dados do cartão de crédito</span>
-                <img src={arrowRight} alt="arrow" className={styles.arrow} />
-              </a>
-              <a href="/faq/update-account" className={styles.faqItem}>
-                <span>Quero alterar dados cadastrais da conta</span>
-                <img src={arrowRight} alt="arrow" className={styles.arrow} />
-              </a>
-            </div>
+            <FaqList items={faqItems} />
           </div>
         </Card>
 
         <Card>
           <div className={styles.cardContent}>
             <h3 className={styles.cardTitle}>Atendimentos</h3>
-            <div className={styles.faqList}>
-              <a href="/faq/coupon" className={styles.faqItem}>
-                <span>Desejo falar diretamente com um atendente</span>
-                <img src={arrowRight} alt="arrow" className={styles.arrowServices} />
-              </a>
-            </div>
+            <FaqList items={supportItems} />
           </div>
         </Card>
       </Modal>
