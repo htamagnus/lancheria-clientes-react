@@ -16,3 +16,9 @@
   height: 100%;
   z-index: -1; /* Ensure the pseudo-element is behind everything */
 }
+
+@media (max-width: 480px) {
+  .background {
+
+  }
+}

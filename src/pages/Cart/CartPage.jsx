@@ -13,7 +13,7 @@ const CartPage = () => {
   const initialItems = [
     {
       image: burger,
-      title: "Hambúrguer de costela",
+      title: "Hambúrguer",
       description: "adicionar cheddar",
       price: 30.00,
       quantity: 1,

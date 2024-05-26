@@ -16,7 +16,7 @@ const orders = [
     },
     {
         id: 2,
-        name: "Lancheria Quiosque do Parque",
+        name: "Quiosque do Parque",
         payment: "Cartão de crédito",
         orderNumber: 2323,
         date: "24/03/2024 às 11:16",
@@ -32,7 +32,7 @@ const orders = [
     },
     {
         id: 4,
-        name: "Lancheria Quiosque do Parque",
+        name: "Quiosque do Parque",
         payment: "Cartão de crédito",
         orderNumber: 2325,
         date: "24/03/2024 às 11:16",

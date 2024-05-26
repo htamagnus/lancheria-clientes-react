@@ -13,7 +13,7 @@ const faqItems = [
 ];
 
 const supportItems = [
-  { href: "/faq/coupon", text: "Desejo falar diretamente com um atendente", arrowClass: styles.arrowServices },
+  { href: "/faq/coupon", text: "Desejo falar com um atendente", arrowClass: styles.arrowServices },
 ];
 
 const FaqList = ({ items }) => (
