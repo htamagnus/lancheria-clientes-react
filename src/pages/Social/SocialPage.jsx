@@ -14,7 +14,7 @@ export default function SocialPage() {
     return (
         <Background>
             <Modal>
-                <Title text="Redes Sociais" arrow={backArrow} />
+                <Title text="Redes Sociais" arrow={backArrow} redirectTo="/home"/>
                 <Card additionalStyles={{ flexDirection: 'column', paddingBottom: "20px" }}>
                     <p className={styles.paragraph}>Faça a integração de suas redes sociais para compartilhar suas experiências com a aplicação, comidas e pedidos!</p>
                     <div className={styles.card}>

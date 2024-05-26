@@ -28,7 +28,7 @@ export default function ProfilePage() {
     return (
         <Background>
             <Modal>
-                <Title text="Dados pessoais" arrow={arrowBack} redirectTo="/" />
+                <Title text="Dados pessoais" arrow={arrowBack} redirectTo="/home" />
                 <form className={styles.form}>
                     <div className={styles.form_gap}>
                         {formFields.map((field) => (

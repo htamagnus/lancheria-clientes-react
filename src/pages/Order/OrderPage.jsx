@@ -58,7 +58,7 @@ export default function OrderPage() {
     return (
         <Background>
             <Modal>
-                <Title text="Histórico de Pedidos" arrow={arrowBack}></Title>
+                <Title text="Histórico de Pedidos" arrow={arrowBack} redirectTo="/home"></Title>
                 {orders.map(order => (
                     <OrderDetails
                         key={order.id}

@@ -12,7 +12,7 @@ const CartPage = () => {
   return (
     <Background>
       <Modal>
-        <Title text="Carrinho" arrow={arrowBack} />
+        <Title text="Carrinho" arrow={arrowBack} redirectTo="/home" />
         <div className={styles.cards}>
           {[
             {

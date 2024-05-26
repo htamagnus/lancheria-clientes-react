@@ -24,7 +24,7 @@ export default function PaymentPage() {
   return (
     <Background>
       <Modal>
-        <Title text="Formas de Pagamento" arrow={backArrow} />
+        <Title text="Formas de Pagamento" arrow={backArrow} redirectTo="/home"/>
         <Card
           height="100px"
           additionalStyles={{

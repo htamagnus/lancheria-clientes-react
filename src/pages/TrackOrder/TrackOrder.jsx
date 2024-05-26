@@ -52,7 +52,7 @@ export default function TrackOrderPage() {
     return (
         <Background>
             <Modal>
-                <Title text="Acompanhar Pedido" arrow={backArrow}></Title>
+                <Title text="Acompanhar Pedido" arrow={backArrow} redirectTo="/home"></Title>
                 {orders.map((order, index) => (
                     <OrderCard
                         key={index}

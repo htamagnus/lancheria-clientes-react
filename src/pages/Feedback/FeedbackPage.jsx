@@ -19,7 +19,7 @@ export default function FeedbackPage() {
     return (
         <Background>
             <Modal>
-                <Title text="Avaliações e Feedbacks" arrow={backArrow} />
+                <Title text="Avaliações e Feedbacks" arrow={backArrow} redirectTo="/home"/>
                 <FeedbackCard 
                     title="Produtos" 
                     paragraph="Conte como tem sido sua experiência com os produtos da nossa aplicação" 

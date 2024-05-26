@@ -28,7 +28,7 @@ export default function NotificationPage() {
     return (
         <Background>
             <Modal>
-                <Title text="Notificações" arrow={arrowBack} />
+                <Title text="Notificações" arrow={arrowBack} redirectTo="/home"/>
                 <div className={styles.card}>
                     {notificationData.map((notification, index) => (
                         <NotificationCard

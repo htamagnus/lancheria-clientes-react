@@ -31,7 +31,7 @@ export default function SupportPage() {
   return (
     <Background>
       <Modal>
-        <Title text="Suporte ao Cliente" arrow={backArrow} />
+        <Title text="Suporte ao Cliente" arrow={backArrow} redirectTo="/home"/>
 
         <Card additionalStyles={{ marginBottom: "30px" }}>
           <div className={styles.cardContent}>
