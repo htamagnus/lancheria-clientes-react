@@ -1,7 +1,7 @@
 import styles from './Button.module.scss';
 
-export default function Button({ text }) {
+export default function Button({ text, onClick }) {
     return (
-        <button type="submit" className={styles.button}>{text}</button>
+        <button type="submit" className={styles.button} onClick={onClick}>{text}</button>
     )
 }
