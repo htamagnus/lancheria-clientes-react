@@ -1,0 +1,19 @@
+.card{
+    &__title {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    &__paragraph{
+        font-weight: 300;
+        font-size: 18px;
+        display: flex;
+        align-items: flex-start;
+        margin: 0; /* Remove qualquer margem */
+        padding: 0; /* Remove qualquer padding */
+    }
+}
+
+.button {
+    margin-top: 20px;
+}
