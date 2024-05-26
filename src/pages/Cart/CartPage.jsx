@@ -1,75 +1,60 @@
 import Background from "../../components/Background/Background";
-import styles from "./CartPage.module.scss";
 import Modal from "../../components/Modal/Modal";
 import Title from "../../components/Title/Title";
-import { useNavigate } from "react-router-dom";
-import arrowBack from "../../assets/arrow-back.png";
 import Card from "../../components/Card/Card";
-import burguer from "../../assets/images/burger.png";
+import styles from "./CartPage.module.scss";
+import arrowBack from "../../assets/arrow-back.png";
+import burger from "../../assets/images/burger.png";
 import coke from "../../assets/images/coke.png";
 import toppings from "../../assets/images/toppings.png";
 
-export default function CartPage() {
-  const navigate = useNavigate();
-
-  const handleRegisterRedirect = () => {
-    navigate("/home");
-  };
-
+const CartPage = () => {
   return (
     <Background>
       <Modal>
-        <Title text="Carrinho" arrow={arrowBack}></Title>
+        <Title text="Carrinho" arrow={arrowBack} />
         <div className={styles.cards}>
-          <div className={styles.cardContainer}>
-            <Card height="150px">
-              <img src={burguer} alt="burger" className={styles.image} />
-              <div className={styles.texts}>
-                <h3 className={styles.texts__title}>Hambúrguer de costela</h3>
-                <p className={styles.texts__paragraph}>adicionar cheddar</p>
-                <p className={styles.texts__price}>R$ 30,00</p>
-              </div>
-              <div className={styles.quantityControls}>
-                <button className={styles.quantityButton}>-</button>
-                <p className={styles.quantityNumber}>1</p>
-                <button className={styles.quantityButton}>+</button>
-              </div>
-            </Card>
-          </div>
-
-          <div className={styles.cardContainer}>
-            <Card height="150px">
-              <img src={coke} alt="burger" className={styles.image} />
-              <div className={styles.texts}>
-                <h3 className={styles.texts__title}>Refrigerante</h3>
-                <p className={styles.texts__paragraph}>enviar canudos</p>
-                <p className={styles.texts__price}>R$ 8,00</p>
-              </div>
-              <div className={styles.quantityControls}>
-                <button className={styles.quantityButton}>-</button>
-                <p className={styles.quantityNumber}>1</p>
-                <button className={styles.quantityButton}>+</button>
-              </div>
-            </Card>
-          </div>
-
-          <div className={styles.cardContainer}>
-            <Card height="150px">
-              <img src={toppings} alt="burger" className={styles.image} />
-              <div className={styles.texts}>
-                <h3 className={styles.texts__title}>Sobremesa</h3>
-                <p className={styles.texts__paragraph}>adicionar chantilly</p>
-                <p className={styles.texts__price}>R$ 30,00</p>
-              </div>
-              <div className={styles.quantityControls}>
-                <button className={styles.quantityButton}>-</button>
-                <p className={styles.quantityNumber}>1</p>
-                <button className={styles.quantityButton}>+</button>
-              </div>
-            </Card>
-          </div>
+          {[
+            {
+              image: burger,
+              title: "Hambúrguer de costela",
+              description: "adicionar cheddar",
+              price: "R$ 30,00",
+            },
+            {
+              image: coke,
+              title: "Refrigerante",
+              description: "enviar canudos",
+              price: "R$ 8,00",
+            },
+            {
+              image: toppings,
+              title: "Sobremesa",
+              description: "adicionar chantilly",
+              price: "R$ 30,00",
+            },
+          ].map((item, index) => (
+            <div key={index} className={styles.cardContainer}>
+              <Card height="150px">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className={styles.image}
+                />
+                <div className={styles.texts}>
+                  <h3 className={styles.textsTitle}>{item.title}</h3>
+                  <p className={styles.textsParagraph}>{item.description}</p>
+                  <p className={styles.textsPrice}>{item.price}</p>
+                </div>
+                <div className={styles.quantityControls}>
+                  <button className={styles.quantityButton}>-</button>
+                  <p className={styles.quantityNumber}>1</p>
+                  <button className={styles.quantityButton}>+</button>
+                </div>
+              </Card>
+            </div>
+          ))}
         </div>
-        
         <div className={styles.totalContainer}>
           <p className={styles.totalText}>Total</p>
           <p className={styles.totalValue}>R$ 68,00</p>
@@ -77,4 +62,6 @@ export default function CartPage() {
       </Modal>
     </Background>
   );
-}
+};
+
+export default CartPage;
