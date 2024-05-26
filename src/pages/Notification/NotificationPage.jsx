@@ -6,6 +6,23 @@ import Title from "../../components/Title/Title";
 import arrowBack from "../../assets/arrow-back.png";
 import notifications from "../../assets/icons/notifications.png";
 
+const notificationData = [
+    { text: "Alerta sobre status do pedido", imageClass: styles.image1 },
+    { text: "Promoções e ofertas", imageClass: styles.image2 },
+    { text: "Novidades", imageClass: styles.image3 },
+    { text: "Avaliação do Pedido Entregue", imageClass: styles.image4 },
+];
+
+function NotificationCard({ text, imageClass }) {
+    return (
+        <Card>
+            <div className={styles.container}>
+                <p>{text}</p>
+                <img src={notifications} alt="" className={imageClass} />
+            </div>
+        </Card>
+    );
+}
 
 export default function NotificationPage() {
     return (
@@ -13,36 +30,15 @@ export default function NotificationPage() {
             <Modal>
                 <Title text="Notificações" arrow={arrowBack} />
                 <div className={styles.card}>
-                <Card>
-                    <div className={styles.container}>
-                    <p>Alerta sobre status do pedido</p>
-                    <img src={notifications} alt="" className={styles.image1} />
-                    </div>
-                </Card>
-
-                <Card>
-                    <div className={styles.container}>
-                    <p>Promoções e ofertas</p>
-                    <img src={notifications} alt="" className={styles.image2} />
-                    </div>
-                </Card>
-
-                <Card>
-                    <div className={styles.container}>
-                    <p>Novidades</p>
-                    <img src={notifications} alt="" className={styles.image3} />
-                    </div>
-                </Card>
-
-
-                <Card>
-                    <div className={styles.container}>
-                    <p>Avaliação do Pedido Entregue</p>
-                    <img src={notifications} alt="" className={styles.image4} />
-                    </div>
-                </Card>
+                    {notificationData.map((notification, index) => (
+                        <NotificationCard
+                            key={index}
+                            text={notification.text}
+                            imageClass={notification.imageClass}
+                        />
+                    ))}
                 </div>
             </Modal>
         </Background>
-    )
+    );
 }
