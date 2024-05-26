@@ -1,12 +1,8 @@
-/* Adicionando estilo ao body para remover a rolagem */
-body {
-    overflow: hidden; /* Remove a rolagem */
-  }
-  
+
   .container {
     display: flex;
     overflow: hidden;
-    height: 100%; /* Garante que o container ocupe 100% da altura do body */
+    height: 100vh; /* Garante que o container ocupe 100% da altura do body */
   }
   
   .sidebar {
@@ -86,7 +82,6 @@ body {
   
   .menu, .promotions {
     margin: 20px 0;
-    margin: 40px;
   }
   
   .menuItems, .promoItems {
@@ -110,14 +105,15 @@ body {
   }
   
   .menuImage, .promoImage {
-    width: 100%;
+    width: 440px;
     height: auto;
+    margin-left: 0px;
   }
   
   h2 {
     font-size: 30px;
     font-weight: 500;
-    margin-left: 20px;
+    margin-left: 50px;
     margin-bottom: 6px;
   }
   
