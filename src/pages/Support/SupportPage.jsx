@@ -9,7 +9,7 @@ import Card from "../../components/Card/Card";
 const faqItems = [
   { href: "/faq/coupon", text: "Não recebo cupom de desconto" },
   { href: "/faq/delete-card", text: "Excluir dados do cartão de crédito" },
-  { href: "/faq/update-account", text: "Quero alterar dados cadastrais da conta" },
+  { href: "/faq/update-account", text: "Quero alterar dados cadastrais" },
 ];
 
 const supportItems = [
