@@ -72,15 +72,20 @@
 @media (max-width: 768px) {
   .input,
   .button {
-    max-width: 350px;
+    max-width: 300px;
   }
 
   .forgetPassword {
-    margin-left: 200px;
+    margin-left: 160px;
     text-align: center;
+    font-size: 14px;
   }
 
   .divider {
-    max-width: 350px;
+    max-width: 300px;
+  }
+
+  .logo {
+    margin-top: 60px;
   }
 }
