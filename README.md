@@ -42,7 +42,7 @@
 
 <h2 id="descricao"> Descrição 📄</h2>
 
-Este é um projeto feito para a materia de **Laboratório e simulação de prototipagem**, da faculdade de ADS. Foi desenvolvido o protótipo de baixa fidelidade e alta fidelidade. Este projeto tem como público alvo o setor de alimentação, focando especificamente em **lancherias** e serviços correlatos. Há uma vasta gama de oportunidades para a aplicação de tecnologias que podem trazer melhorias significativas nas diversas etapas do processo, desde o cadastramento de cardápios até a interação com clientes e fornecedores.
+Este é um projeto feito para a matéria de **Laboratório e simulação de prototipagem**, da faculdade de ADS. Foi desenvolvido o protótipo de baixa fidelidade e alta fidelidade. Este projeto tem como público alvo o setor de alimentação, focando especificamente em **lancherias** e serviços correlatos. Há uma vasta gama de oportunidades para a aplicação de tecnologias que podem trazer melhorias significativas nas diversas etapas do processo, desde o cadastramento de cardápios até a interação com clientes e fornecedores.
 
 O objetivo deste projeto é **aprimorar** e **modernizar** os processos de venda online e
 entrega de sanduíches da Lancheria Quiosque do Parque, situada em Canoas, RS. A
